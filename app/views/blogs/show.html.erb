@@ -1,0 +1,7 @@
+<p><%= @blog.content %></p>
+<p><%= @blog.author.full_name %></p>
+<% if current_author.id.eql? @blog.author.id %>
+<p><%= link_to 'Edit', edit_blog_path(@blog) %>
+<p><%= link_to 'Destroy', blog_path(@blog), method: :delete %>
+<% end %>
+<p><%= link_to 'Back', :back %></p>
