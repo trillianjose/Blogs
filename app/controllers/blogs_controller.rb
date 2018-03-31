@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :authenticate_author!, except: [:index, :show]
+  skip_before_action :verify_authenticity_token, only: :destroy
 
   def index
     @blogs = Blog.order(created_at: :asc)
@@ -46,6 +47,6 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:content)
+    params.require(:blog).permit(:title, :content)
   end
 end

@@ -1,8 +1,31 @@
-<h2>Blogs</h2>
-<% @blogs.each do |blog| %>
- <p><%= blog.content %></p>
- <p><%= blog.author.full_name %></p>
- <p><%= link_to 'Show', blog_path(blog) %>
-<% end %>
-<br><br>
-<%= link_to 'Create new blog', new_blog_path %>
+<hr>
+
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <span class="subheading">Poems and Thougs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <% if @blogs.size == 0 %>
+          <h3>No Blogs Available</h3>
+        <%end%>
+        <% @blogs.each do |blog| %>
+         <p><%= link_to blog.title, blog_path(blog) %></p>
+        <% end %>
+        <hr>
+        <%= link_to 'Create new blog', new_blog_path %>
+      </div>
+    </div>
+  </div>
+</div>
