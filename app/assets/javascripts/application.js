@@ -16,3 +16,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+/* affix the navbar after scroll below header */
+$('nav').affix({
+      offset: {
+        top: 10
+      }
+});

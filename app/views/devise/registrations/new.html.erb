@@ -1,28 +1,40 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+<nav class="navbar navbar-light" style="background-color:  #0e1a35;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color:  white" href="#">SIGN UP</a>
+    </div>
+    <ul class="nav navbar-nav">
+     </ul>
   </div>
-
+</nav>
+<div class="container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+ <div class="form-group">
+   <div class="field">
+  <%= f.label :first_name %><br />
+  <%= f.text_field :first_name, autofocus: true %>
+</div>
+</div>
+<div class="form-group">
   <div class="field">
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name, autofocus: true %>
   </div>
-
+</div>
+<div class="form-group">
   <div class="field">
     <%= f.label :age %><br />
     <%= f.text_field :age, autofocus: true %>
   </div>
-
+</div>
+<div class="form-group">
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+</div>
+<div class="form-group">
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -30,15 +42,17 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
+</div>
+<div class="form-group">
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+</div>
+<br>
+<div class="actions">
+  <%= f.submit "Sign up" %>
+</div>
 <% end %>
-
 <%= render "devise/shared/links" %>
+</div>

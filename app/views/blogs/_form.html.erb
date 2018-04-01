@@ -1,11 +1,41 @@
-<%= form_for @blog do |f| %>
-
-  <%= render 'shared/errors', model: @blog %>
-
-  <%= f.label :title %>
-  <%= f.text_field :title %><br>
-  <%= f.label :content %>
-  <%= f.text_area :content %><br>
-  <%= f.submit "Send" %>
-<% end %>
-<p><%= link_to 'Back', :back %></p>
+<body class="hm-gradient">
+  <main>
+  <!--MDB Inputs-->
+    <div class="container mt-4">
+      <%= form_for @blog do |f| %>
+        <%= render 'shared/errors', model: @blog %>
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="pt-3 pb-2 font-up deep-purple-text"><strong>Title</strong></h5>
+              <!-- Grid row -->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form">
+                    <i class="fa fa-qq prefix"></i>
+                    <%= f.text_field :title %><br>
+                  </div>
+                </div>
+              </div>
+              <h5 class="pt-3 pb-2 font-up deep-purple-text"><strong>Content</strong></h5>
+              <div class="col-md-6">
+                <!--Textarea with icon prefix-->
+                <div class="md-form">
+                  <i class="fa fa-pencil prefix"></i>
+                  <%= f.text_area :content %>
+                </div>
+              </div>
+              <%= f.submit "Send" %>
+              <% end %>
+            </div>
+            <%= link_to 'Back', :back %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>

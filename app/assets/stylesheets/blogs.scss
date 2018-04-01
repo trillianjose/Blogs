@@ -1,3 +1,75 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body {
+  height:100%;
+}
+
+.first {
+  height:50vh;
+  min-height:100px;
+  background-size:cover;
+  background-image:url('http://www.paradise-island.com.mv/slideshow/2078875837-pic.jpg');
+  background-position: top center;
+}
+
+.affix {
+  background-color: #eee;
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;
+  -o-transition:padding 0.2s ease-out;
+  transition:padding 0.2s ease-out;
+}
+
+@media (min-width:768px) {
+  .affix-top {
+    /* navbar style at top */
+    background-color:transparent;
+    border-color:transparent;
+    padding: 15px;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+  }
+}
+
+nav .navbar-nav .nav-link,
+nav .navbar-brand {
+ color: #ffffff;
+}
+
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
+}
+
+
+body {
+ background: url('/assets/example/bg_suburb.jpg') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+
+
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+.md-form .prefix~textarea {
+    padding-top: 1.6rem;
+}
